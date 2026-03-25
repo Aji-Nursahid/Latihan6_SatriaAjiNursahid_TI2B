@@ -1,15 +1,8 @@
 .card {
     width: 350px;
-    height: 520px;
+    height: 600px;
     perspective: 1000px;
     cursor: pointer;
-    position: relative; 
-    z-index: 10;
-}
-
-.card:hover .inner {
-    transform: scale(1.05); 
-    animation: cahayaEmas 1s infinite alternate;
 }
 
 .front, .back {
@@ -18,7 +11,7 @@
     height: 100%;
     backface-visibility: hidden;
     border-radius: 10px;
-    padding: 25px;
+    padding: 20px;
     box-sizing: border-box;
     border: 1px solid rgba(255, 215, 0, 0.3);
 }
@@ -36,11 +29,9 @@
 }
 
 .tata-letak-grid {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    height: 100%;
     gap: 10px;
 }
 
@@ -62,11 +53,11 @@
 }
 
 .inner {
-   width: 100%;
+    width: 100%;
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card.active .inner {
@@ -74,35 +65,24 @@
 }
 
 @keyframes cahayaEmas {
-    from { box-shadow: 0 0 15px gold; }
-    to { box-shadow: 0 0 40px gold, 0 0 60px orange; }
+    from { box-shadow: 0 0 10px gold; }
+    to { box-shadow: 0 0 30px gold, 0 0 50px orange; }
 }
 
 .card:hover .inner {
-    animation: cahayaEmas 1s infinite alternate;    
-    scale: 1.02 !important;     
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5); 
+    animation: cahayaEmas 1s infinite alternate;
+    scale: 1.02;
 }
 
 @media screen and (max-width: 480px) {
-    .card, .inner {
-        width: 320px;
-        min-height: 580px;
+    .card {
+        width: 300px;
+        height: 480px;
     }
-    
-    .front h1 {
-        font-size: 22px;
-    }
-    
-    .main-title2 {
-        font-size: 11px;
-    }
-
-    .doa-section p {
-        font-size: 11px;
+    .main-title1 {
+        font-size: 35px;
     }
 }
-
 
 .header-text { 
     font-family: 'Tenor Sans', sans-serif; 
