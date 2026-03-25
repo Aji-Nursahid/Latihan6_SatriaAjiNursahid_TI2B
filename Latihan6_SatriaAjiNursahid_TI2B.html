@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kartu Lebaran Satria Aji</title>
-    
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:wght@300;400;600&family=Tenor+Sans&display=swap" rel="stylesheet">
 
     <style>
         body {
-            background-color: #000;
+            background-color: green;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
-            /* Nama file panjang wajib pakai tanda kutip agar terbaca */
+            padding: 20px; /* Kasih ruang biar hover scale gak kepotong layar */
+            box-sizing: border-box;
             background-image: url('src/Islamic Twibbon Border, Islamic, Ramadan, Twibbon PNG Transparent Clipart Image and PSD File for Free Download.jpg');
             background-repeat: no-repeat;
-            background-size: cover;
+            background-position: center;
+            background-size: 100% 100%; /* Biar bingkai twibbon utuh di HP */
+            background-attachment: fixed;
         }
     </style>
 </head>
 <body>
 
-    <div class="card" onclick="flip(this)" style="border-radius: 15px;">
+    <div class="card" onclick="flip(this)">
         <div class="inner">
             
             <div class="front">
@@ -35,20 +38,20 @@
                     
                     <div class="doa-section">
                         <h1>تَقَبَّلَ اللَّهُ مِنَّا وَمِنْكُمْ صِيَامَنَا وَصِيَامَكُمْ</h1>
-                        <p>Semoga Allah menerima kita dan kamu semua, puasa kita dan puasa kamu semua.</p>
+                        <p style="font-size: 12px; color: #eee;">Semoga Allah SWT menerima kita dan kamu semua, puasa kita dan puasa kamu semua.</p>
                     </div>
 
                     <div class="ucapan-section">
                         <p class="main-title2">Kami segenap keluarga besar <b>Satria Aji Nursahid</b> memohon maaf setulus hati. Selamat Lebaran!</p>
-                        <p style="color: gold; margin-top: 10px;">Klik untuk THR! 😹</p>
+                        <p style="color: gold; margin-top: 10px; font-weight: bold;">Klik untuk THR! 😹</p>
                     </div>
                 </div>
             </div>
 
             <div class="back">
-                <h1 style="font-size: 40px;">🤑</h1>
-                <h2 style="text-align: center;">SELAMAT KAMU DAPAT THR 💸</h2>
-                <p>SIlakan Cek Saldo Rekening Kamu!</p>
+                <h1 style="font-size: 50px; margin-bottom: 10px;">🤑</h1>
+                <h2 style="text-align: center; color: gold;">SELAMAT KAMU DAPAT THR 💸</h2>
+                <p style="text-align: center; color: white;">Silakan Cek Saldo Rekening Kamu!</p>
             </div>
 
         </div>
