@@ -1,1 +1,0 @@
-# Latihan6_SatriaAjiNursahid_TI2B
