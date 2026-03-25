@@ -1,8 +1,10 @@
 .card {
     width: 350px;
-    height: 520px;
+    min-height: 550px;
     perspective: 1000px;
     cursor: pointer;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .front, .back {
@@ -11,7 +13,7 @@
     height: 100%;
     backface-visibility: hidden;
     border-radius: 10px;
-    padding: 20px;
+    padding: 25px;
     box-sizing: border-box;
     border: 1px solid rgba(255, 215, 0, 0.3);
 }
@@ -29,9 +31,11 @@
 }
 
 .tata-letak-grid {
-    display: grid;
-    grid-template-rows: auto auto 1fr auto;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     gap: 10px;
 }
 
@@ -52,9 +56,9 @@
     color: gold;
 }
 
-
 .inner {
     width: 100%;
+    min-height: 550px;
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
@@ -76,12 +80,21 @@
 }
 
 @media screen and (max-width: 480px) {
-    .card {
-        width: 300px;
-        height: 480px;
+    .card, .inner {
+        width: 320px;
+        min-height: 580px;
     }
-    .main-title1 {
-        font-size: 35px;
+    
+    .front h1 {
+        font-size: 22px;
+    }
+    
+    .main-title2 {
+        font-size: 11px;
+    }
+
+    .doa-section p {
+        font-size: 11px;
     }
 }
 
