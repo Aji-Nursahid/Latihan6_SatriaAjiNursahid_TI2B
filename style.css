@@ -38,7 +38,7 @@
 }
 
 .front {
-    background-color: green;
+    background-color: #004d00;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
