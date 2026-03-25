@@ -1,5 +1,6 @@
 .card {
-    width: 350px;
+    width: 90%;
+    max-width: 350px;
     min-height: 550px;
     height: auto;
     perspective: 1000px;
@@ -37,7 +38,26 @@
 }
 
 .front {
-    background: #006400;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 30px 25px;
+}
+
+.tata-letak-grid {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  gap: 10px;
+}
+
+.doa-section {
+  margin: 10px 0;
+}
+
+.ucapan-section {
+  margin-top: 10px;
 }
 
 .back {
@@ -67,9 +87,12 @@
     to { box-shadow: 0 0 30px gold, 0 0 50px orange; }
 }
 
+.card:hover {
+  transform: scale(1.02);
+}
+
 .card:hover .inner {
-    animation: cahayaEmas 1s infinite alternate;
-    transform: scale(1.02); /* Lebih aman untuk Chrome dibanding 'scale' saja */
+  animation: cahayaEmas 1s infinite alternate;
 }
 
 @media screen and (max-width: 480px) {
