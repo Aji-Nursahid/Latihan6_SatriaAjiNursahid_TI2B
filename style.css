@@ -1,10 +1,15 @@
 .card {
     width: 350px;
-    min-height: 550px;
+    height: 520px;
     perspective: 1000px;
     cursor: pointer;
-    border-radius: 15px;
-    overflow: hidden;
+    position: relative; 
+    z-index: 10;
+}
+
+.card:hover .inner {
+    transform: scale(1.05); 
+    animation: cahayaEmas 1s infinite alternate;
 }
 
 .front, .back {
@@ -57,12 +62,11 @@
 }
 
 .inner {
-    width: 100%;
-    min-height: 550px;
+   width: 100%;
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
 }
 
 .card.active .inner {
@@ -70,13 +74,14 @@
 }
 
 @keyframes cahayaEmas {
-    from { box-shadow: 0 0 10px gold; }
-    to { box-shadow: 0 0 30px gold, 0 0 50px orange; }
+    from { box-shadow: 0 0 15px gold; }
+    to { box-shadow: 0 0 40px gold, 0 0 60px orange; }
 }
 
 .card:hover .inner {
-    animation: cahayaEmas 1s infinite alternate;
-    scale: 1.02;
+    animation: cahayaEmas 1s infinite alternate;    
+    scale: 1.02 !important;     
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5); 
 }
 
 @media screen and (max-width: 480px) {
